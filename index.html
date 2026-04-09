@@ -63,7 +63,7 @@
     </div>
     <div style="margin-top: 15px;">
       <label style="font-size: 16px;">
-        <input type="checkbox" id="autoRunCheck" disable>
+        <input type="checkbox" id="autoRunCheck">
         Início automático em <span id="countdown">5</span> segundos
       </label>
     </div>
@@ -99,7 +99,7 @@
       alert(msg);
       return true;
     });
-    var autoRunEnabled = true;
+    var autoRunEnabled = false;
     var countdownValue = 5;
     var countdownTimer = null;
     // Button click
