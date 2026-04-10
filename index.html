@@ -5,10 +5,11 @@
     <script src="./bundle.js"></script>
     <style>
       body {
-        background-image: url("bg.jpg");
+        background-image: url("Goldhen.jpg");
         background-repeat: no-repeat;
         background-color: #252526;
-        color: #cccccc;
+        background-size: 100%;
+        color: #000000;
         font-family: "Segoe UI", Tahoma, sans-serif;
         text-align: center;
       }
@@ -17,8 +18,8 @@
       }
       #console {
         font-family: monospace;
-        background-color: #1e1e1e;
-        color: #cccccc;
+        background-color: #838181;
+        color: #070707;
         border: 1px solid #3c3c3c;
         padding: 12px;
         border-radius: 6px;
@@ -44,10 +45,13 @@
       #jailbreakBtn:not(:disabled):hover {
         background: #005a9e;
       }
+      #time {
+        visibility: hidden;
+      }
       footer {
         margin-top: 30px;
         font-size: 14px;
-        color: #888;
+        color: #000000;
       }
     </style>
     <script>
@@ -57,15 +61,17 @@
     </script>
   </head>
   <body>
-    <h2>PSFree: A PS4 7.00 - 9.60 Exploit Chain</h2>
+    <h2>PSFree: do fimware 7.00 => 9.60</h2>
     <div>
       <button id="jailbreakBtn">Iniciar Jailbreak</button>
     </div>
     <div style="margin-top: 15px;">
-      <label style="font-size: 16px;">
-        <input type="checkbox" id="autoRunCheck" checked>
-        Início automático em <span id="countdown">5</span> segundos
-      </label>
+      <label id="time" style="font-size: 16px;">
+        <input type="checkbox" id="autoRunCheck">
+        Ao clicar em Iniciar aguarde em torno de <span id="countdown">5</span> segundos
+      </label><br>
+        Ao clicar em Iniciar aguarde em torno de <span id="countdown">5</span> segundos
+      
     </div>
     <pre id="console"></pre>
     <footer>
@@ -99,7 +105,7 @@
       alert(msg);
       return true;
     });
-    var autoRunEnabled = true;
+    var autoRunEnabled = false;
     var countdownValue = 5;
     var countdownTimer = null;
     // Button click

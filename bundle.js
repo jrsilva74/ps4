@@ -4732,7 +4732,7 @@ function checkPlatformIsSupported() {
 // Main Jailbreak Function
 async function doJailBreak() {
   if (!checkPlatformIsSupported()) {
-    window.log("Unsupported platform detected! Designed for PS4 [7.00 - 9.60]", "red");
+    window.log("Unsupported platform detected! Designed for PS4 [7.00 - 9.60]", "black");
     /*
     window.log("Running DEMO application...\n");
     window.log("Detected FW: PS4 v9.00\n");
